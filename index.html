@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Luminaria SMP</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- =========================
+        INTRO SCREEN
+========================= -->
+
+<div id="intro">
+
+    <div class="intro-overlay"></div>
+
+    <div class="intro-content">
+
+        <img src="logo.png" class="intro-logo">
+
+        <h1>LUMINARIA SMP</h1>
+
+        <p>
+            Where Destiny Meets Adventure
+        </p>
+
+        <button id="enterBtn">
+
+            ✨ Begin Adventure ✨
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+        LOADING SCREEN
+========================= -->
+
+<div id="loadingScreen">
+
+    <img src="logo.png" class="loading-logo">
+
+    <h2 id="loadingText">
+
+        Preparing Luminaria...
+
+    </h2>
+
+    <div class="loadingBar">
+
+        <div id="loadingProgress"></div>
+
+    </div>
+
+    <span id="loadingPercent">0%</span>
+
+</div>
+
+<!-- Background Music -->
+
+<audio id="bgMusic" preload="auto" loop>
+
+    <source src="mondstat.mp3" type="audio/mpeg">
+
+</audio>
+
+<body>
+
+<div class="particles"></div>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#forum">Forum</a>
+        <a href="#vote">Vote</a>
+        <a href="#rules">Rules</a>
+        <a href="#commands">Commands</a>
+        <a href="#members">Members</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#server-features">Information</a>
+    </div>
+    <a href="#store" class="store-btn">Store</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="stat">
+        <h2>0 PLAYERS ONLINE</h2>
+
+        <p class="copy-text"
+           onclick="copyToClipboard('luminaria.ultramc.co')">
+             luminaria.ultramc.co
+        </p>
+    </div>
+
+    <div class="logo floating">
+        <img src="logo.png" alt="Luminaria SMP Logo">
+    </div>
+
+    <div class="stat">
+        <h2>20 USERS ONLINE</h2>
+
+        <p class="copy-text"
+           onclick="copyToClipboard('https://dsc.gg/lmnr')">
+             https://dsc.gg/lmnr
+        </p>
+    </div>
+
+</section>
+
+<div id="copyToast">
+    Copied to clipboard!
+</div>
+<!-- BIG MESSAGE -->
+<section class="big-message">
+    <h1>Play Minecraft in another level</h1>
+    <p>
+        Start playing real Minecraft, bonding with friends, laughing with them,
+        exploring with them, and build with them.
+    </p>
+</section>
+
+<!-- ABOUT -->
+<section class="about-server">
+
+    <div class="about-text">
+        <h2>About Server</h2>
+
+        <p>
+            Luminaria SMP is focused on enhancing the Minecraft server experience.
+            It is built around peaceful survival gameplay and competitive PvP events.
+        </p>
+
+        <details>
+            <summary>Read more</summary>
+            <p>
+                Players can explore, build kingdoms, form alliances, join events,
+                and enjoy a community-driven survival experience focused on creativity and teamwork.
+            </p>
+        </details>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><h3>Uptime</h3><p>99.9%</p></div>
+        <div class="stat-card"><h3>TPS</h3><p>20.0</p></div>
+        <div class="stat-card"><h3>Players</h3><p>0 / 100</p></div>
+        <div class="stat-card"><h3>Members</h3><p>600+</p></div>
+    </div>
+
+</section>
+
+<!-- COMMUNITY -->
+<section class="quick-links" id="forum">
+    <h2 class="section-title">Community Hub</h2>
+    <p class="section-subtitle">Everything you need for your Luminaria SMP journey.</p>
+
+    <div class="links-grid">
+        <div class="link-card">💬 Forum</div>
+        <div class="link-card">🗳️ Vote</div>
+        <div class="link-card">📜 Rules</div>
+        <div class="link-card">👥 Members</div>
+        <div class="link-card">⌨️ Commands</div>
+        <div class="link-card">🖼️ Gallery</div>
+    </div>
+</section>
+
+<!-- SERVER INFO -->
+<section class="server-info">
+    <h2 class="section-title">Server Information</h2>
+
+    <div class="info-grid">
+        <div class="info-box"><h3>IP Address</h3><p>luminaria.ultramc.co</p></div>
+        <div class="info-box"><h3>Version</h3><p>1.21.x</p></div>
+        <div class="info-box"><h3>Gamemode</h3><p>Survival SMP</p></div>
+        <div class="info-box"><h3>Discord</h3><p>dsc.gg/lmnr</p></div>
+    </div>
+</section>
+
+<!-- RULES -->
+<section id="rules" class="page-section">
+    <h2>📜 Rules</h2>
+
+    <div class="rules-card">
+        <p><b>ORDINANCE NO. 001</b></p>
+        <p><i>“The Luminaria SMP Peace and Conduct Act of 2025”</i></p>
+
+        <h3>SECTION 1 — Title</h3>
+        <p>Luminaria SMP Peace and Conduct Act of 2025.</p>
+
+        <h3>SECTION 2 — Policy</h3>
+        <p>Maintain respectful and peaceful gameplay for all players.</p>
+
+        <h3>SECTION 3 — Scope</h3>
+        <p>Applies to all players and staff.</p>
+
+        <h3>SECTION 4 — Griefing</h3>
+        <p>Destroying builds is strictly prohibited.</p>
+
+        <h3>SECTION 5 — PvP</h3>
+        <p>Unwanted killing or trapping is not allowed.</p>
+
+        <h3>SECTION 6 — Respect</h3>
+        <p>No harassment, hate speech, or toxicity.</p>
+
+        <h3>SECTION 7 — Cheating</h3>
+        <p>No hacks, x-ray, or unfair mods.</p>
+
+        <h3>SECTION 8 — Claims</h3>
+        <p>Use /claim to protect land.</p>
+
+        <h3>SECTION 9 — Staff</h3>
+        <p>Staff decisions are final.</p>
+
+        <h3>SECTION 10 — Effectivity</h3>
+        <p>Rules apply immediately.</p>
+    </div>
+</section>
+
+<!-- COMMANDS -->
+<section id="commands" class="page-section">
+    <h2>⌨ Commands</h2>
+
+    <div class="cmd-grid">
+        <div class="cmd-card">/tpa</div>
+        <div class="cmd-card">/home</div>
+        <div class="cmd-card">/spawn</div>
+        <div class="cmd-card">/rtp</div>
+        <div class="cmd-card">/tpaccept</div>
+        <div class="cmd-card">/ah</div>
+        <div class="cmd-card">/warp</div>
+        <div class="cmd-card">/rules</div>
+        <div class="cmd-card">/kit</div>
+        <div class="cmd-card">/crates</div>
+        <div class="cmd-card">/ranks</div>
+        <div class="cmd-card">/voicechat</div>
+        <div class="cmd-card">/setting</div>
+        <div class="cmd-card">/guide</div>
+    </div>
+</section>
+
+<!-- SERVER FEATURES -->
+<section class="server-features" id="features">
+
+    <h2 class="section-title">Server Features</h2>
+    <p class="section-subtitle">
+        Experience a unique Minecraft adventure inspired by fantasy RPG mechanics.
+        Discover exclusive gameplay systems available only on Luminaria SMP.
+    </p>
+
+    <div class="feature-grid">
+
+<a href="#visions" class="feature-card">
+
+    <div class="feature-icon">✨</div>
+
+    <h3>Elemental Visions</h3>
+
+    <p>
+        Wield one of five elemental powers chosen by fate.
+        Click to learn more.
+    </p>
+
+    <span class="learn-more">
+        Learn More →
+    </span>
+
+</a>
+        <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h3>Custom Weapons</h3>
+            <p>
+                Wield powerful weapons with custom attributes,
+                passive abilities, and unique combat effects.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Custom Armor</h3>
+            <p>
+                Collect armor sets that provide powerful bonuses,
+                elemental resistance, and exclusive abilities.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🏛️</div>
+            <h3>Domains</h3>
+            <p>
+                Challenge instanced dungeons with your party,
+                defeat bosses, and earn valuable rewards.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">👹</div>
+            <h3>World Bosses</h3>
+            <p>
+                Face dangerous bosses that appear throughout the world,
+                each possessing unique attack patterns and loot.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎁</div>
+            <h3>Daily Rewards</h3>
+            <p>
+                Log in every day to receive valuable rewards,
+                exclusive items, and progression bonuses.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VISIONS -->
+<section class="vision-section" id="visions">
+
+    <h2 class="section-title">Elemental Visions</h2>
+
+    <p class="section-subtitle">
+        The gods choose those worthy of wielding elemental power.
+        Every player begins without a Vision. By obtaining a Vision Gem,
+        destiny will decide which element you receive.
+    </p>
+
+    <div class="vision-grid">
+
+        <div class="vision-card">
+            <img src="anemo.png" alt="Anemo">
+            <h3>Anemo</h3>
+            <p>
+                Masters of the wind, specializing in mobility,
+                crowd control, and agile combat.
+            </p>
+        </div>
+
+        <div class="vision-card">
+            <img src="hydro.png" alt="Hydro">
+            <h3>Hydro</h3>
+            <p>
+                Manipulate water to heal allies,
+                control the battlefield, and adapt to any fight.
+            </p>
+        </div>
+
+        <div class="vision-card">
+            <img src="pyro.png" alt="Pyro">
+            <h3>Pyro</h3>
+            <p>
+                Command blazing flames to overwhelm enemies
+                with explosive attacks.
+            </p>
+        </div>
+
+        <div class="vision-card">
+            <img src="geo.png" alt="Geo">
+            <h3>Geo</h3>
+            <p>
+                Harness the strength of earth to create shields,
+                defensive structures, and powerful strikes.
+            </p>
+        </div>
+
+        <div class="vision-card">
+            <img src="electro.png" alt="Electro">
+            <h3>Electro</h3>
+            <p>
+                Unleash lightning-fast attacks capable of
+                devastating multiple enemies.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="vision-guide">
+
+        <h3>How to Unlock a Vision</h3>
+
+        <div class="guide-grid">
+
+            <div class="guide-step">
+                <span>1</span>
+                Obtain a <b>Vision Gem</b>.
+            </div>
+
+            <div class="guide-step">
+                <span>2</span>
+                Hold the Vision Gem.
+            </div>
+
+            <div class="guide-step">
+                <span>3</span>
+                Execute
+                <code>/vision unlock</code>.
+            </div>
+
+            <div class="guide-step">
+                <span>4</span>
+                Receive one random Vision:
+                Anemo, Hydro, Pyro, Geo or Electro.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Luminaria SMP • All Rights Reserved
+</footer>
+
+</footer>
+
+<audio id="bgMusic" preload="auto" loop>
+    <source src="mondstat.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
