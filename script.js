@@ -11,6 +11,10 @@ const progress = document.getElementById("loadingProgress");
 const percent = document.getElementById("loadingPercent");
 const loadingText = document.getElementById("loadingText");
 
+// Assuming your website content is inside a wrapper (recommended)
+// If not wrapped, you can target individual sections, but a wrapper is best.
+const mainContent = document.getElementById("mainContent"); 
+
 const loadingMessages = [
     "Preparing Luminaria...",
     "Awakening your Vision...",
@@ -24,17 +28,17 @@ const loadingMessages = [
     "Almost Ready..."
 ];
 
-// Initial State: Ensure body is hidden until user interacts
-document.body.style.visibility = "hidden";
-intro.style.visibility = "visible"; 
+// Ensure initial state: body is visible, but main content is hidden via CSS or JS
+if (mainContent) mainContent.style.visibility = "hidden";
 
 button.addEventListener("click", () => {
     // 1. Play Music
     music.volume = 0.35;
     music.play().catch(err => console.log("Audio interaction required."));
 
-    // 2. Hide Intro
-    intro.style.opacity = "0";
+    // 2. Add class to trigger CSS transition for fade
+    intro.classList.add("hideIntro");
+    
     setTimeout(() => {
         intro.style.display = "none";
         loading.style.display = "flex";
@@ -61,9 +65,10 @@ function startLoading(){
             
             setTimeout(() => {
                 loading.style.opacity = "0";
-                // Reveal the website content once loading is done
-                document.body.style.visibility = "visible"; 
-                document.body.style.overflow = "auto";
+                loading.style.transition = "opacity 1s ease";
+                
+                // Reveal the website content
+                if (mainContent) mainContent.style.visibility = "visible";
                 
                 setTimeout(() => {
                     loading.remove();
