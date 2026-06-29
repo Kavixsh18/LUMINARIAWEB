@@ -91,35 +91,20 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-
-    <div class="stat">
-        <h2>0 PLAYERS ONLINE</h2>
-
-        <p class="copy-text"
-           onclick="copyToClipboard('luminaria.ultramc.co')">
-             luminaria.ultramc.co
-        </p>
-    </div>
-
-    <div class="logo floating">
-        <img src="logo.png" alt="Luminaria SMP Logo">
-    </div>
-
-    <div class="stat">
-        <h2>20 USERS ONLINE</h2>
-
-        <p class="copy-text"
-           onclick="copyToClipboard('https://dsc.gg/lmnr')">
-             https://dsc.gg/lmnr
-        </p>
-    </div>
-
-</section>
-
-<div id="copyToast">
-    Copied to clipboard!
+<div class="stat">
+    <h2>0 PLAYERS ONLINE</h2>
+    <p class="copy-text" onclick="copyToClipboard('luminaria.ultramc.co')">
+        luminaria.ultramc.co
+    </p>
 </div>
+
+<div class="stat">
+    <h2>20 USERS ONLINE</h2>
+    <p class="copy-text" onclick="copyToClipboard('https://dsc.gg/lmnr')">
+        https://dsc.gg/lmnr
+    </p>
+</div>
+
 <!-- BIG MESSAGE -->
 <section class="big-message">
     <h1>Play Minecraft in another level</h1>
@@ -552,7 +537,23 @@
     <source src="mondstat.mp3" type="audio/mpeg">
 </audio>
 
-<script src="script.js"></script>
+<script src="script.js">
+
+    function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Show the toast
+        const toast = document.getElementById("copyToast");
+        toast.className = "show";
+        
+        // Hide the toast after 3 seconds
+        setTimeout(() => {
+            toast.className = toast.className.replace("show", "");
+        }, 3000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+</script>
 
 
 </body>
