@@ -316,14 +316,23 @@
 
 }
 
-body{
-    min-height:100vh;
-    color:var(--text);
-    overflow-x:hidden;
-    background:
-    radial-gradient(circle at top,var(--bg3) 0%,var(--bg2) 25%,var(--bg1) 60%,#000 100%);
+body {
+    min-height: 100vh;
+    color: var(--text);
+    overflow-x: hidden;
+    /* Deep cosmic background */
+    background: radial-gradient(circle at 50% 50%, #2e0249 0%, #10002b 50%, #05000a 100%);
+    background-attachment: fixed;
 }
 
+/* Add this to your HTML right after the opening <body> tag */
+.bg-vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+    z-index: -1;
+}
 /* 🌌 PARTICLES */
 .particles{
     position:fixed;
