@@ -1363,3 +1363,42 @@ html{
     color:#ffd54f;
     font-weight:600;
 }
+/* ===========================
+   STAFF TEAM
+=========================== */
+
+.staff-card{
+    border:1px solid rgba(255,215,0,.25);
+}
+
+.staff-card::before{
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,215,0,.18),
+            transparent 70%
+        );
+}
+
+.staff-card:hover{
+    border-color:#ffd54f;
+    box-shadow:
+        0 0 35px rgba(255,215,0,.35),
+        0 0 70px rgba(255,215,0,.15);
+}
+
+.staff-card img{
+    filter:
+        drop-shadow(0 0 18px rgba(255,215,0,.45));
+}
+
+.staff-card:hover img{
+    transform:translateY(-10px) scale(1.08);
+    filter:
+        drop-shadow(0 0 35px rgba(255,215,0,.8));
+}
+
+.staff-card p{
+    color:#ffd54f;
+    font-weight:600;
+}
