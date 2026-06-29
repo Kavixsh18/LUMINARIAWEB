@@ -10,31 +10,61 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- =========================
-     PARTICLES
-========================= -->
+<!-- ========================================= -->
+<!-- INTRO SCREEN -->
+<!-- ========================================= -->
+
+<div id="enterScreen">
+
+    <div class="enter-box">
+
+        <img src="logo.png" class="enter-logo">
+
+        <h1>Luminaria SMP</h1>
+
+        <button id="enterBtn">
+            Enter Luminaria SMP
+        </button>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<audio id="bgmusic" loop>
+
+    <source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- ========================================= -->
+<!-- PARTICLES -->
+<!-- ========================================= -->
 
 <div class="particles"></div>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- ========================================= -->
+<!-- NAVBAR -->
+<!-- ========================================= -->
 
 <nav>
 
     <div class="nav-logo">
 
-        <img src="logo.png" alt="Luminaria Logo">
+        <img src="logo.png" alt="Logo">
 
         <span>Luminaria SMP</span>
 
@@ -43,258 +73,731 @@ rel="stylesheet">
     <div class="nav-links">
 
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#forum">Forum</a>
-        <a href="#vote">Vote</a>
-        <a href="#rules">Rules</a>
-        <a href="#commands">Commands</a>
-        <a href="#staff">Staff</a>
-        <a href="#members">Members</a>
-        <a href="#gallery">Gallery</a>
 
+        <a href="#about">About</a>
+
+        <a href="#forum">Forum</a>
+
+        <a href="#vote">Vote</a>
+
+        <a href="#rules">Rules</a>
+
+        <a href="#commands">Commands</a>
+
+        <a href="#staff">Staff</a>
+
+        <a href="#members">Members</a>
+
+        <a href="#gallery">Gallery</a>
     </div>
 
-    <a href="#" class="store-btn">
+    <a href="#store" class="store-btn">
         Store
     </a>
 
 </nav>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
 
-<section id="home" class="hero reveal">
+<section class="hero" id="home">
 
-    <div class="stat">
+    <div class="hero-glow"></div>
 
-        <h2>0 PLAYERS ONLINE</h2>
+    <!-- LEFT SERVER INFO -->
 
-        <p>luminaria.ultramc.co</p>
+    <div class="hero-side reveal">
+
+        <div class="hero-stat">
+
+            <h2 id="onlinePlayers">0 PLAYERS ONLINE</h2>
+
+            <p>play.luminariasmp.net</p>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h3>Survival Reimagined</h3>
+
+            <p>
+                Experience Minecraft with custom
+                features, kingdoms, PvP events,
+                beautiful builds and an amazing
+                community.
+            </p>
+
+        </div>
 
     </div>
 
-    <div class="logo floating">
+    <!-- CENTER LOGO -->
 
-        <img src="logo.png" alt="Luminaria Logo">
+    <div class="hero-center reveal">
+
+        <div class="logo floating">
+
+            <img src="logo.png" alt="Luminaria Logo">
+
+        </div>
 
     </div>
 
-    <div class="stat">
+    <!-- RIGHT SERVER INFO -->
 
-        <h2>600+ COMMUNITY MEMBERS</h2>
+    <div class="hero-side reveal">
 
-        <p>dsc.gg/lmnr</p>
+        <div class="hero-stat">
+
+            <h2>600+ MEMBERS</h2>
+
+            <p>dsc.gg/lmnr</p>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h3>Version</h3>
+
+            <p>
+                Java Edition
+                <br>
+                1.21.x
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- =========================
-     BIG MESSAGE
-========================= -->
+<!-- ========================================= -->
+<!-- BIG MESSAGE -->
+<!-- ========================================= -->
 
 <section class="big-message reveal">
 
-    <span class="hero-tag">
+    <span class="badge">
 
-        ✨ WELCOME TO LUMINARIA SMP
+        ✦ WELCOME TO LUMINARIA ✦
 
     </span>
 
     <h1>
 
-        Play Minecraft<br>
-        <span>on Another Level</span>
+        Play Minecraft on another level.
 
     </h1>
 
     <p>
 
-        Start playing real Minecraft.
-
-        Bond with friends, create unforgettable memories,
-        laugh together, explore breathtaking landscapes,
-        establish powerful nations, conquer dangerous bosses,
-        and build incredible creations in a world where your
-        story truly matters.
+        Start playing real Minecraft,
+        bonding with friends,
+        laughing together,
+        exploring countless adventures,
+        building kingdoms,
+        conquering dungeons,
+        defeating bosses,
+        and creating unforgettable memories
+        inside Luminaria SMP.
 
     </p>
 
     <div class="hero-buttons">
 
-        <a href="#about" class="hero-btn">
-            Explore Server
+        <a href="#about" class="primary-btn">
+            Start Journey
         </a>
 
-        <a href="http://dsc.gg/lmnr" class="hero-btn secondary">
-            Join Discord
+        <a href="#rules" class="secondary-btn">
+            Read Rules
         </a>
 
     </div>
 
 </section>
-
-<!-- BIG MESSAGE -->
-<section class="big-message reveal">
-
-    <h1>Play Minecraft in Another Level</h1>
-
-    <p>
-        Start playing real Minecraft, bonding with friends, laughing together,
-        exploring a magical world, creating unforgettable memories, and building
-        your own legacy in Luminaria SMP.
-    </p>
-
-</section>
-
+<!-- ========================================= -->
 <!-- ABOUT SERVER -->
-<section class="about-server reveal">
+<!-- ========================================= -->
+
+<section class="about-server reveal" id="about">
 
     <div class="about-text">
 
-        <h2>About Server</h2>
+        <span class="small-title">
+            ABOUT LUMINARIA SMP
+        </span>
+
+        <h2>
+            More than just another Minecraft server.
+        </h2>
 
         <p>
-            Luminaria SMP is a premium survival experience designed to transform
-            Minecraft into something far beyond ordinary survival.
-            We focus on building a welcoming community where peaceful gameplay,
-            teamwork, exploration, and competitive PvP events coexist.
-        </p>
 
-        <br>
+            Luminaria SMP is a custom Minecraft Survival server
+            dedicated to providing players with a unique and
+            long-lasting multiplayer experience.
+
+            Instead of vanilla survival, the server introduces
+            enhanced gameplay systems, custom content,
+            challenging bosses, unique progression,
+            exciting PvP events, nations, player economy,
+            and community-focused activities.
+
+        </p>
 
         <p>
-            Whether you're an experienced builder, explorer, redstone engineer,
-            warrior, or simply looking for friends to play with,
-            Luminaria offers countless adventures through custom systems,
-            kingdoms, events, economies, and future content updates inspired
-            by RPG games.
+
+            Whether you enjoy building massive kingdoms,
+            exploring dangerous structures,
+            collecting rare equipment,
+            fighting alongside friends,
+            or becoming the richest player,
+            Luminaria offers countless adventures for everyone.
+
         </p>
 
-        <details>
-            <summary>Read More</summary>
+        <a href="#rules" class="primary-btn">
 
-            <p>
-                Every player begins their own story inside Luminaria.
-                Establish kingdoms, conquer challenges, participate in seasonal
-                events, collect unique items, discover hidden locations, and
-                become part of an ever-growing community built on respect,
-                creativity, and fun.
-            </p>
+            Learn More
 
-        </details>
+        </a>
 
     </div>
+
+    <!-- SERVER STATUS -->
 
     <div class="stats-grid">
 
         <div class="stat-card reveal">
-            <h3>🟢 Uptime</h3>
+
+            <span>🟢</span>
+
+            <h3>Uptime</h3>
+
             <p>99.9%</p>
+
         </div>
 
         <div class="stat-card reveal">
-            <h3>⚡ TPS</h3>
+
+            <span>⚡</span>
+
+            <h3>TPS</h3>
+
             <p>20.0</p>
+
         </div>
 
         <div class="stat-card reveal">
-            <h3>👥 Players</h3>
+
+            <span>👥</span>
+
+            <h3>Players</h3>
+
             <p>0 / 100</p>
+
         </div>
 
         <div class="stat-card reveal">
-            <h3>💜 Members</h3>
-            <p>600+</p>
+
+            <span>💬</span>
+
+            <h3>Discord</h3>
+
+            <p>600+ Members</p>
+
         </div>
 
     </div>
 
 </section>
 
+<!-- ========================================= -->
 <!-- COMMUNITY HUB -->
-<section id="forum" class="quick-links reveal">
+<!-- ========================================= -->
+
+<section class="quick-links reveal" id="forum">
+
+    <span class="small-title">
+
+        COMMUNITY
+
+    </span>
 
     <h2 class="section-title">
-        Community Hub
+
+        Everything you need in one place.
+
     </h2>
 
     <p class="section-subtitle">
-        Everything you need for your Luminaria SMP adventure.
+
+        Join events, read rules, discover commands,
+        meet players, and become part of the
+        Luminaria SMP community.
+
     </p>
 
     <div class="links-grid">
 
-        <div class="link-card reveal">
-            💬
+        <a href="#" class="link-card reveal">
+
+            <div class="card-icon">
+                💬
+            </div>
+
             <h3>Forum</h3>
-            <p>Community discussions and announcements.</p>
-        </div>
 
-        <div class="link-card reveal">
-            🗳️
+            <p>
+
+                Server announcements,
+                community discussions,
+                updates and suggestions.
+
+            </p>
+
+        </a>
+        <a href="#" class="link-card reveal">
+
+            <div class="card-icon">
+                🗳️
+            </div>
+
             <h3>Vote</h3>
-            <p>Support the server and earn rewards.</p>
-        </div>
 
-        <div class="link-card reveal">
-            📜
+            <p>
+
+                Vote daily to receive
+                valuable rewards, keys,
+                and exclusive bonuses.
+
+            </p>
+
+        </a>
+
+        <a href="#rules" class="link-card reveal">
+
+            <div class="card-icon">
+                📜
+            </div>
+
             <h3>Rules</h3>
-            <p>Read the official ordinances.</p>
-        </div>
 
-        <div class="link-card reveal">
-            👥
-            <h3>Members</h3>
-            <p>Meet the Luminaria community.</p>
-        </div>
+            <p>
 
-        <div class="link-card reveal">
-            ⌨️
+                Read the official
+                Peace and Conduct Act
+                before joining.
+
+            </p>
+
+        </a>
+
+        <a href="#commands" class="link-card reveal">
+
+            <div class="card-icon">
+                ⌨️
+            </div>
+
             <h3>Commands</h3>
-            <p>Useful server commands.</p>
-        </div>
 
-        <div class="link-card reveal">
-            🖼️
+            <p>
+
+                Learn all useful
+                commands to make your
+                adventure easier.
+
+            </p>
+
+        </a>
+
+        <a href="#members" class="link-card reveal">
+
+            <div class="card-icon">
+                👥
+            </div>
+
+            <h3>Members</h3>
+
+            <p>
+
+                Meet the Staff Team
+                and the original
+                pioneers of Luminaria.
+
+            </p>
+
+        </a>
+
+        <a href="#gallery" class="link-card reveal">
+
+            <div class="card-icon">
+                🖼️
+            </div>
+
             <h3>Gallery</h3>
-            <p>Server screenshots and creations.</p>
-        </div>
+
+            <p>
+
+                Explore beautiful
+                screenshots from our
+                Minecraft world.
+
+            </p>
+
+        </a>
 
     </div>
 
 </section>
 
+<!-- ========================================= -->
 <!-- SERVER INFORMATION -->
+<!-- ========================================= -->
 
 <section class="server-info reveal">
 
+    <span class="small-title">
+
+        SERVER DETAILS
+
+    </span>
+
     <h2 class="section-title">
-        Server Information
+
+        Join the Adventure
+
     </h2>
 
     <div class="info-grid">
 
         <div class="info-box reveal">
-            <h3>Server IP</h3>
-            <p>luminaria.ultramc.co</p>
+
+            <h3>🌐 Server IP</h3>
+
+            <p>
+
+                play.luminariasmp.net
+
+            </p>
+
         </div>
 
         <div class="info-box reveal">
-            <h3>Version</h3>
-            <p>1.21.x</p>
+
+            <h3>🎮 Version</h3>
+
+            <p>
+
+                Java Edition
+                <br>
+                1.21.x
+
+            </p>
+
         </div>
 
         <div class="info-box reveal">
-            <h3>Gamemode</h3>
-            <p>Survival SMP</p>
+
+            <h3>⚔️ Gamemode</h3>
+
+            <p>
+
+                Survival SMP
+                <br>
+                Custom RPG
+
+            </p>
+
         </div>
 
         <div class="info-box reveal">
-            <h3>Discord</h3>
-            <p>dsc.gg/lmnr</p>
+
+            <h3>💬 Discord</h3>
+
+            <p>
+
+                dsc.gg/lmnr
+
+            </p>
+
         </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- RULES -->
+<!-- ========================================= -->
+
+<section id="rules" class="page-section reveal">
+
+    <span class="small-title">
+
+        SERVER RULEBOOK
+
+    </span>
+
+    <h2>
+
+        📜 Peace and Conduct Act
+
+    </h2>
+
+    <div class="rules-card">
+        <div class="ordinance-header">
+
+            <h3>ORDINANCE NO. 001</h3>
+
+            <h4>
+                "The Luminaria SMP Peace and Conduct Act of 2025"
+            </h4>
+
+            <p>
+
+                <strong>AN ACT</strong>
+
+                Establishing the Code of Conduct,
+                Player Responsibilities,
+                and Prohibited Acts
+                within the Luminaria SMP Server,
+                and for Other Purposes.
+
+            </p>
+
+        </div>
+
+        <div class="rule-section reveal">
+
+            <h3>SECTION 1. Title</h3>
+
+            <p>
+
+                This Act shall be known as the
+                <strong>
+                "Luminaria SMP Peace and Conduct Act of 2025."
+                </strong>
+
+            </p>
+
+        </div>
+
+        <div class="rule-section reveal">
+
+            <h3>SECTION 2. Declaration of Policy</h3>
+
+            <p>
+
+                It is hereby declared the policy of
+                Luminaria SMP to maintain a peaceful,
+                cooperative,
+                respectful,
+                and enjoyable environment
+                for all players.
+
+            </p>
+
+            <p>
+
+                The preservation of peace,
+                fairness,
+                safety,
+                creativity,
+                and mutual respect
+                shall always remain the
+                guiding principles
+                of the server.
+
+            </p>
+
+        </div>
+
+        <div class="rule-section reveal">
+
+            <h3>SECTION 3. Scope and Application</h3>
+
+            <p>
+
+                These rules apply equally to
+
+            </p>
+
+            <ul>
+
+                <li>Players</li>
+
+                <li>Helpers</li>
+
+                <li>Moderators</li>
+
+                <li>Administrators</li>
+
+                <li>Content Creators</li>
+
+                <li>Every individual connected to Luminaria SMP.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="rule-section reveal">
+
+            <h3>SECTION 4. Prohibition of Griefing</h3>
+
+            <p>
+
+                Destroying,
+                stealing,
+                burning,
+                exploding,
+                or intentionally damaging
+                another player's property
+                without permission
+                is strictly prohibited.
+
+            </p>
+
+            <p>
+
+                Respect every player's
+                builds,
+                farms,
+                storage,
+                and creativity.
+
+            </p>
+
+        </div>
+
+        <div class="rule-section reveal">
+
+            <h3>SECTION 5. Player Killing</h3>
+
+            <p>
+
+                Random Player versus Player combat
+                is not permitted unless
+                both parties agree,
+                or the activity takes place
+                inside an official PvP Event.
+
+            </p>
+
+            <p>
+
+                Trapping,
+                spawn killing,
+                or repeatedly targeting
+                another player
+                is prohibited.
+
+            </p>
+
+        </div>
+        <h3>SECTION 6 — Standards of Respectful Conduct</h3>
+
+        <p>
+            <strong>(a)</strong> All players shall maintain respectful communication at all times.
+        </p>
+
+        <p>
+            <strong>(b)</strong> Harassment, bullying, discrimination, hate speech,
+            excessive toxicity, or any form of abusive behavior is strictly prohibited.
+            Every player is expected to contribute to a welcoming and friendly
+            environment for everyone.
+        </p>
+
+        <h3>SECTION 7 — Prohibition of Cheating and Exploits</h3>
+
+        <p>
+            The use of hacked clients, x-ray texture packs, auto-clickers,
+            macros, duplication glitches, cheating software, or any
+            unauthorized modification that provides an unfair gameplay
+            advantage is prohibited.
+        </p>
+
+        <h3>SECTION 8 — Land Claim and Building Regulations</h3>
+
+        <p>
+            <strong>(a)</strong> Players shall clearly indicate and protect their
+            land or nation by using <code>/selection</code> and
+            <code>/claim</code>.
+        </p>
+
+        <p>
+            <strong>(b)</strong> No player shall construct buildings or establish
+            settlements within close proximity of another player's territory
+            without permission from the owner.
+        </p>
+
+        <p>
+            <strong>(c)</strong> Farms, storage systems, trading halls, and any
+            player-made structures shall not be used without the owner's
+            explicit consent.
+        </p>
+
+        <h3>SECTION 9 — Administrative Authority</h3>
+
+        <p>
+            <strong>(a)</strong> Server administrators are vested with the authority
+            to enforce all provisions of this Ordinance.
+        </p>
+
+        <p>
+            <strong>(b)</strong> Administrators may issue verbal warnings,
+            temporary punishments, suspensions, or permanent removal from
+            the server whenever necessary to preserve peace and order.
+        </p>
+
+        <p>
+            <strong>(c)</strong> Decisions made by Staff Members and Helpers shall
+            be subject to the approval of the Server Owner whenever required.
+        </p>
+
+        <h3>SECTION 10 — Effectivity</h3>
+
+        <p>
+            This Ordinance shall take effect immediately upon its publication
+            and official announcement within the Luminaria SMP community.
+            Every player joining the server is deemed to have accepted and
+            agreed to abide by these rules.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     COMMANDS
+=========================== -->
+
+<section id="commands" class="page-section reveal">
+
+    <h2>⌨ Server Commands</h2>
+
+    <p class="section-subtitle">
+        Essential commands every adventurer should know.
+    </p>
+
+    <div class="cmd-grid">
+
+        <div class="cmd-card">/tpa</div>
+        <div class="cmd-card">/home</div>
+        <div class="cmd-card">/spawn</div>
+        <div class="cmd-card">/rtp</div>
+        <div class="cmd-card">/tpaccept</div>
+        <div class="cmd-card">/ah</div>
+        <div class="cmd-card">/warp</div>
+        <div class="cmd-card">/rules</div>
+        <div class="cmd-card">/kit</div>
+        <div class="cmd-card">/crates</div>
+        <div class="cmd-card">/ranks</div>
+        <div class="cmd-card">/voicechat</div>
+        <div class="cmd-card">/setting</div>
+        <div class="cmd-card">/guide</div>
 
     </div>
 
@@ -309,55 +812,58 @@ rel="stylesheet">
     <h2 class="section-title">🛡 Staff Team</h2>
 
     <p class="section-subtitle">
-        The dedicated people responsible for maintaining peace,
-        hosting events, and ensuring every player enjoys their adventure.
+        Meet the dedicated individuals who maintain peace, organize events,
+        assist players, and ensure that every adventurer enjoys the best
+        experience possible in Luminaria SMP.
     </p>
 
     <div class="members-grid">
 
-        <div class="member-card reveal">
-            <img src="kavish.png" alt="Kavixsh">
+        <div class="member-card">
+            <img src="staffs/kavixsh.png" alt="Kavixsh">
             <h3>Kavixsh</h3>
-            <span>Developer</span>
+            <span>Owner</span>
         </div>
 
-        <div class="member-card reveal">
-            <img src="download.png" alt="Aerrii">
+        <div class="member-card">
+            <img src="staffs/aerrii.png" alt="Aerrii">
             <h3>Aerrii</h3>
             <span>Administrator</span>
         </div>
 
-        <div class="member-card reveal">
-            <img src="staff/zieeerrr.png" alt="Zieeerrr">
+        <div class="member-card">
+            <img src="staffs/zieeerrr.png" alt="Zieeerrr">
             <h3>Zieeerrr</h3>
-            <span>Senior Admin</span>
+            <span>Administrator</span>
         </div>
-        <div class="member-card reveal">
-            <img src="Ice.png" alt="Icezic">
-            <h3>Icezic</h3>
-            <span>Senior Admin</span>
-        </div>
-        <div class="member-card reveal">
-            <img src="hutao.png" alt="Hutao">
+
+        <div class="member-card">
+            <img src="staffs/hutao.png" alt="Hutao">
             <h3>Hutao</h3>
             <span>Moderator</span>
         </div>
-        
-        <div class="member-card reveal">
-            <img src="izaa.png" alt="Izee">
-            <h3>Izee</h3>
-            <span>Moderator</span>
-        </div>
-        
-        <div class="member-card reveal">
-            <img src="Satsuki.png" alt="Satsuki">
-            <h3>Satsuki</h3>
+
+        <div class="member-card">
+            <img src="staffs/icezic.png" alt="Icezic">
+            <h3>Icezic</h3>
             <span>Moderator</span>
         </div>
 
-        <div class="member-card reveal">
-            <img src="yerfy.png" alt="Yerfyboy">
+        <div class="member-card">
+            <img src="staffs/satsuki.png" alt="Satsuki">
+            <h3>Satsuki</h3>
+            <span>Helper</span>
+        </div>
+
+        <div class="member-card">
+            <img src="staffs/yerfyboy.png" alt="Yerfyboy">
             <h3>Yerfyboy</h3>
+            <span>Helper</span>
+        </div>
+
+        <div class="member-card">
+            <img src="staffs/izee.png" alt="Izee">
+            <h3>Izee</h3>
             <span>Helper</span>
         </div>
 
@@ -371,59 +877,111 @@ rel="stylesheet">
 
 <section class="members-section reveal">
 
-    <h2 class="section-title">
-        👑 OG Players
-    </h2>
+    <h2 class="section-title">👑 OG Players</h2>
 
     <p class="section-subtitle">
-        The pioneers of Luminaria SMP who helped build the community from the very beginning.
+        These legendary players have been with Luminaria SMP since its earliest
+        days. Their adventures, kingdoms, friendships, and stories helped build
+        the community into what it is today.
     </p>
 
     <div class="members-grid">
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="ardent.png" alt="ArdentMC">
             <h3>ArdentMC</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="auren.png" alt="AurenEngineer">
             <h3>AurenEngineer</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="kaiju.png" alt="KaijuWard">
             <h3>KaijuWard</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="resi.png" alt="ResidentialCourt">
             <h3>ResidentialCourt</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="rotten.png" alt="RottenRael">
             <h3>RottenRael</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="litch.png" alt="Litch">
             <h3>Litch</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="pebbles.png" alt="Pebbles">
             <h3>Pebbles</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="sthreed.png" alt="Sthreed">
             <h3>Sthreed</h3>
+            <span>OG Player</span>
         </div>
 
-        <div class="member-card reveal">
+        <div class="member-card">
             <img src="6ryst.png" alt="6Ryst">
             <h3>6Ryst</h3>
+            <span>OG Player</span>
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- ===========================
+     GALLERY
+=========================== -->
+
+<section id="gallery" class="gallery-section reveal">
+
+    <h2 class="section-title">🖼 Gallery</h2>
+
+    <p class="section-subtitle">
+        Memories captured from adventures, community events,
+        kingdoms, and beautiful landscapes across Luminaria SMP.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="gallery/gallery1.jpg" alt="Gallery 1">
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery/gallery2.jpg" alt="Gallery 2">
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery/gallery3.jpg" alt="Gallery 3">
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery/gallery4.jpg" alt="Gallery 4">
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery/gallery5.jpg" alt="Gallery 5">
+        </div>
+
+        <div class="gallery-card">
+            <img src="gallery/gallery6.jpg" alt="Gallery 6">
         </div>
 
     </div>
@@ -431,50 +989,31 @@ rel="stylesheet">
 </section>
 
 <!-- ===========================
-     RULES
+     FORUM
 =========================== -->
 
-<section id="rules" class="page-section reveal">
+<section id="forum" class="page-section reveal">
 
-    <h2>📜 Server Rules</h2>
+    <h2>💬 Community Forum</h2>
 
-    <div class="rules-card">
+    <p>
+        The official Luminaria Forum is currently under development.
+        Soon you'll be able to share screenshots, post guides,
+        report bugs, participate in discussions, and interact with
+        the entire community directly from the website.
+    </p>
 
-        <p><strong>ORDINANCE NO. 001</strong></p>
+    <br>
 
-        <p>
-            <em>The Luminaria SMP Peace and Conduct Act of 2025</em>
-        </p>
-
-        <h3>Peaceful Gameplay</h3>
-
-        <p>
-            Respect every player. Griefing, stealing,
-            random PvP, harassment and toxic behavior
-            are strictly prohibited.
-        </p>
-
-        <h3>Land Protection</h3>
+    <div class="info-box">
+        <h3>Coming Soon</h3>
 
         <p>
-            Use <strong>/selection</strong> and
-            <strong>/claim</strong> to protect your land.
-            Building near another player's claim without
-            permission is not allowed.
-        </p>
-
-        <h3>Cheating</h3>
-
-        <p>
-            Hacked clients, x-ray, duplication glitches,
-            exploits and unfair advantages are prohibited.
-        </p>
-
-        <h3>Staff Authority</h3>
-
-        <p>
-            Staff members enforce server rules fairly.
-            Their decisions may be reviewed by the Owner.
+            ✔ Community Posts<br>
+            ✔ Build Showcase<br>
+            ✔ Suggestions<br>
+            ✔ Bug Reports<br>
+            ✔ Event Announcements
         </p>
 
     </div>
@@ -482,33 +1021,49 @@ rel="stylesheet">
 </section>
 
 <!-- ===========================
-     COMMANDS
+     VOTE
 =========================== -->
 
-<section id="commands" class="page-section reveal">
+<section id="vote" class="page-section reveal">
 
-    <h2>⌨ Useful Commands</h2>
+    <h2>🗳 Vote for Luminaria SMP</h2>
 
-    <div class="cmd-grid">
+    <p>
+        Voting helps our server grow and rewards you with exclusive
+        in-game rewards including crate keys, money, and cosmetics.
+    </p>
 
-        <div class="cmd-card">/tpa</div>
-        <div class="cmd-card">/tpaccept</div>
-        <div class="cmd-card">/home</div>
-        <div class="cmd-card">/spawn</div>
-        <div class="cmd-card">/rtp</div>
-        <div class="cmd-card">/warp</div>
-        <div class="cmd-card">/ah</div>
-        <div class="cmd-card">/rules</div>
-        <div class="cmd-card">/kit</div>
-        <div class="cmd-card">/crates</div>
-        <div class="cmd-card">/ranks</div>
-        <div class="cmd-card">/voicechat</div>
-        <div class="cmd-card">/setting</div>
-        <div class="cmd-card">/guide</div>
+    <br>
+
+    <div class="info-box">
+
+        <h3>Vote Rewards</h3>
+
+        <p>
+            Daily Rewards<br>
+            Vote Crate Keys<br>
+            Economy Money<br>
+            Cosmetics<br>
+            Exclusive Titles
+        </p>
+
+        <br>
+
+        <a href="#" class="btn">
+            Vote Now
+        </a>
 
     </div>
 
 </section>
+
+<!-- ===========================
+     AUDIO
+=========================== -->
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <!-- ===========================
      FOOTER
@@ -519,43 +1074,162 @@ rel="stylesheet">
     <h3>Luminaria SMP</h3>
 
     <p>
-        A next-generation Minecraft Survival experience built around
-        exploration, friendship, kingdoms, custom content and unforgettable adventures.
+        Bringing Minecraft players together through adventure,
+        friendship, exploration, and unforgettable memories.
     </p>
 
     <br>
 
-    <p>
+    <small>
         © 2025 Luminaria SMP • All Rights Reserved
-    </p>
+    </small>
 
 </footer>
-
-<!-- Scroll Reveal -->
-
 <script>
+// ===========================
+// ENTER SCREEN
+// ===========================
+
+const enterScreen = document.getElementById("enterScreen");
+const enterBtn = document.getElementById("enterBtn");
+const progress = document.getElementById("progressBar");
+const music = document.getElementById("bgMusic");
+
+enterBtn.addEventListener("click", () => {
+
+    enterBtn.disabled = true;
+    let width = 0;
+
+    const loading = setInterval(() => {
+
+        width += 2;
+        progress.style.width = width + "%";
+
+        if(width >= 100){
+
+            clearInterval(loading);
+
+            music.volume = 0.35;
+            music.play().catch(()=>{});
+
+            enterScreen.classList.add("hide");
+
+            setTimeout(()=>{
+                enterScreen.remove();
+            },900);
+
+        }
+
+    },25);
+
+});
+
+// ===========================
+// SCROLL REVEAL
+// ===========================
 
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries)=>{
 
-entries.forEach(entry=>{
+    entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-entry.target.classList.add("active");
+            entry.target.classList.add("active");
 
-}
+        }
 
-});
+    });
 
 },{
-threshold:0.15
+    threshold:0.15
 });
 
-reveals.forEach(el=>observer.observe(el));
+reveals.forEach(section=>{
+    observer.observe(section);
+});
 
+// ===========================
+// NAVBAR ACTIVE LINK
+// ===========================
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+    let current = "";
+
+    sections.forEach(section=>{
+
+        const top = section.offsetTop - 140;
+        const height = section.offsetHeight;
+
+        if(scrollY >= top){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+// ===========================
+// FLOATING PARTICLES PARALLAX
+// ===========================
+
+window.addEventListener("scroll",()=>{
+
+    const particles = document.querySelector(".particles");
+
+    particles.style.transform =
+        `translateY(${window.scrollY * 0.15}px)`;
+
+});
+
+// ===========================
+// LOGO HOVER EFFECT
+// ===========================
+
+const logo = document.querySelector(".logo");
+
+logo.addEventListener("mousemove",(e)=>{
+
+    const rect = logo.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width)-0.5)*18;
+    const rotateX = ((y / rect.height)-0.5)*-18;
+
+    logo.style.transform =
+        `perspective(900px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         scale(1.05)`;
+
+});
+
+logo.addEventListener("mouseleave",()=>{
+
+    logo.style.transform = "";
+
+});
 </script>
-
 </body>
-</html>    
+</html>
