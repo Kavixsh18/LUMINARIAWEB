@@ -85,26 +85,41 @@
         <a href="#commands">Commands</a>
         <a href="#members">Members</a>
         <a href="#gallery">Gallery</a>
-        <a href="#features">Information</a>
+        <a href="#server-features">Information</a>
     </div>
     <a href="#store" class="store-btn">Store</a>
 </nav>
 
 <!-- HERO -->
-<div class="stat">
-    <h2>0 PLAYERS ONLINE</h2>
-    <p class="copy-text" onclick="copyToClipboard('luminaria.ultramc.co')">
-        luminaria.ultramc.co
-    </p>
-</div>
+<section class="hero" id="home">
 
-<div class="stat">
-    <h2>20 USERS ONLINE</h2>
-    <p class="copy-text" onclick="copyToClipboard('https://dsc.gg/lmnr')">
-        https://dsc.gg/lmnr
-    </p>
-</div>
+    <div class="stat">
+        <h2>0 PLAYERS ONLINE</h2>
 
+        <p class="copy-text"
+           onclick="copyToClipboard('luminaria.ultramc.co')">
+             luminaria.ultramc.co
+        </p>
+    </div>
+
+    <div class="logo floating">
+        <img src="logo.png" alt="Luminaria SMP Logo">
+    </div>
+
+    <div class="stat">
+        <h2>20 USERS ONLINE</h2>
+
+        <p class="copy-text"
+           onclick="copyToClipboard('https://dsc.gg/lmnr')">
+             https://dsc.gg/lmnr
+        </p>
+    </div>
+
+</section>
+
+<div id="copyToast">
+    Copied to clipboard!
+</div>
 <!-- BIG MESSAGE -->
 <section class="big-message">
     <h1>Play Minecraft in another level</h1>
@@ -531,33 +546,12 @@
     © 2025 Luminaria SMP • All Rights Reserved
 </footer>
 
-</footer>
 
 <audio id="bgMusic" preload="auto" loop>
     <source src="mondstat.mp3" type="audio/mpeg">
 </audio>
 
-<script src="script.js">
-
-/**
- * Copies text to clipboard and shows a toast notification
- * @param {string} text - The text to copy
- */
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        // Show the toast
-        const toast = document.getElementById("copyToast");
-        toast.className = "show";
-        
-        // Hide the toast after 3 seconds
-        setTimeout(() => {
-            toast.className = toast.className.replace("show", "");
-        }, 3000);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
-}
-</script>
+<script src="script.js"></script>
 
 
 </body>
