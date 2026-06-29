@@ -1158,60 +1158,47 @@ html{
 
 }
 
-/* Copyable Text */
-
-.copy-text{
-    cursor:pointer;
-    transition:.3s;
-    user-select:none;
-    display:inline-block;
+/* Styling the copyable text to look interactive */
+.copy-text {
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-.copy-text:hover{
-    color:#c77dff;
-    transform:scale(1.05);
+.copy-text:hover {
+    color: var(--primary);
+    text-decoration: underline;
 }
 
-/* Toast */
-
-#copyToast{
-
-    position:fixed;
-
-    bottom:30px;
-
-    left:50%;
-
-    transform:translateX(-50%) translateY(100px);
-
-    background:#7b2cbf;
-
-    color:white;
-
-    padding:12px 22px;
-
-    border-radius:30px;
-
-    font-weight:600;
-
-    opacity:0;
-
-    transition:.35s;
-
-    z-index:999999;
-
-    box-shadow:0 0 20px rgba(123,44,191,.45);
-
+/* Toast Notification */
+#copyToast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--secondary);
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 100000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#copyToast.show{
-
-    opacity:1;
-
-    transform:translateX(-50%) translateY(0);
-
+#copyToast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
 /* ===========================
    OG PLAYERS
 =========================== */
