@@ -1213,43 +1213,42 @@ html{
 }
 
 /* ===========================
-   MEMBERS SECTION
+   OG PLAYERS
 =========================== */
 
 .members-section{
-    width:85%;
-    margin:90px auto;
+    width:90%;
+    max-width:1700px;
+    margin:120px auto;
     text-align:center;
 }
 
 .members-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:40px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-top:50px;
 }
 
 .member-card{
-    background:rgba(15,15,20,.92);
-    border:1px solid rgba(168,85,247,.25);
-    border-radius:18px;
-    padding:30px;
-    backdrop-filter:blur(15px);
-    transition:.35s;
-    overflow:hidden;
     position:relative;
+    overflow:hidden;
+    background:rgba(18,18,28,.95);
+    border:1px solid rgba(168,85,247,.25);
+    border-radius:22px;
+    padding:40px 25px;
+    backdrop-filter:blur(18px);
+    transition:.35s ease;
 }
 
 .member-card::before{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
-        135deg,
-        rgba(168,85,247,.15),
-        transparent,
-        rgba(255,255,255,.03)
-    );
+    background:
+        radial-gradient(circle at top,
+        rgba(168,85,247,.18),
+        transparent 70%);
     opacity:0;
     transition:.35s;
 }
@@ -1259,44 +1258,68 @@ html{
 }
 
 .member-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-12px) scale(1.03);
     border-color:#c084fc;
     box-shadow:
-        0 0 30px rgba(168,85,247,.35),
-        0 0 60px rgba(168,85,247,.15);
+        0 0 35px rgba(168,85,247,.45),
+        0 0 80px rgba(168,85,247,.18);
 }
+
+/* ===========================
+   PLAYER SKIN
+=========================== */
 
 .member-card img{
-    width:120px;
-    height:120px;
-    border-radius:16px;
-    object-fit:cover;
-    margin-bottom:20px;
-    border:3px solid #a855f7;
-    box-shadow:0 0 20px rgba(168,85,247,.45);
+    width:220px;
+    height:auto;
+    image-rendering:pixelated;
+    object-fit:contain;
+    margin:0 auto 25px;
+    display:block;
+
+    filter:
+        drop-shadow(0 0 15px rgba(168,85,247,.45));
+
+    transition:.35s ease;
 }
+
+.member-card:hover img{
+    transform:translateY(-10px) scale(1.08);
+    filter:
+        drop-shadow(0 0 30px rgba(192,132,252,.95));
+}
+
+/* ===========================
+   NAME
+=========================== */
 
 .member-card h3{
+    font-size:28px;
     color:#ffffff;
-    font-size:22px;
-    margin-bottom:8px;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
-.member-card span{
-    display:inline-block;
+.member-card p{
     color:#c084fc;
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:.5px;
+    margin-top:8px;
+    font-size:15px;
 }
 
 /* Mobile */
 
-@media(max-width:900px){
+@media (max-width:900px){
+
+    .members-grid{
+        grid-template-columns:1fr;
+    }
 
     .member-card img{
-        width:90px;
-        height:90px;
+        width:170px;
+    }
+
+    .member-card h3{
+        font-size:24px;
     }
 
 }
