@@ -1,22 +1,6 @@
 /* ==========================================
             LUMINARIA SCRIPT
 ========================================== */
-/* ==========================================
-            LENIS SMOOTH SCROLL
-========================================== */
-const lenis = new Lenis({
-  duration: 1.5,             // Adjust for speed (higher = slower/smoother)
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing curve
-  smoothWheel: true,         // Enable smooth scrolling for mouse wheel
-  wheelMultiplier: 1,        // Sensitivity
-});
-
-// Sync Lenis with the browser's refresh rate
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
 
 /* ==========================================
             LUMINARIA SCRIPT
