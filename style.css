@@ -14,12 +14,6 @@
     --border:rgba(168,85,247,.25);
 }
 
-html {
-    scroll-behavior: smooth;
-    /* Optional: Improves performance on some browsers */
-    scroll-padding-top: 50px; 
-}
-
 /* RESET */
 *{
     margin:0;
@@ -681,7 +675,8 @@ footer{
 
 /* SCROLL */
 html{
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
 }
 
 /* MOBILE */
